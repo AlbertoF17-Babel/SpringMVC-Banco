@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Sucursales</title>
+    <style>
+        table {
+          width: 100%;
+          border-collapse: collapse;
+        }
+        th, td {
+          padding: 8px;
+          text-align: left;
+          border-bottom: 1px solid #ddd;
+        }
+        th {
+          background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+<h1>Lista de Clientes</h1>
+
+<!-- Mostrar la lista de productos en una tabla -->
+<table>
+    <thead>
+    <tr>
+        <!--    <th>ID</th>-->
+        <th>DNI</th>
+        <th>Nombre</th>
+        <th>Dirección Postal</th>
+        <th>Email</th>
+        <th>Teléfono</th>
+        <th>Sucursal Principal</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="cliente : ${clientes}">
+        <!--    <td th:text="${sucursal.id}"></td>-->
+        <td th:text="${cliente.dni}"></td>
+        <td th:text="${cliente.nombre}"></td>
+        <td th:text="${cliente.direccionPostal}"></td>
+        <td th:text="${cliente.email}"></td>
+        <td th:text="${cliente.telefono}"></td>
+        <td th:text="${cliente.sucursalPrincipal}"></td>
+        <td>
+            <a th:href="@{/cliente/} + ${cliente.id}">
+                DETALLE
+            </a>
+            <form th:action="@{/cliente/} + ${cliente.id} + @{/delete}" method="post">
+                <button type="submit">Eliminar</button>
+            </form>
+
+        </td>
+
+    </tr>
+    </tbody>
+</table>
+
+<hr>
+
+<!-- Formulario para agregar un nuevo producto -->
+<h2>Agregar Nuevo Cliente</h2>
+<form th:action="@{/cliente}" method="post">
+    <label for="dni">DNI:</label>
+    <input type="text" id="dni" name="dni" required>
+    <br>
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" required>
+    <br>
+    <label for="email">Email:</label>
+    <input type="text" id="email" name="email" required>
+    <br>
+    <label for="direccionPostal">Dirección Postal:</label>
+    <input type="text" id="direccionPostal" name="direccionPostal" required>
+    <br>
+    <label for="telefono">Telefono:</label>
+    <input type="text" id="telefono" name="telefono" required>
+    <br>
+    <label for="sucursalPrincipal">Sucursal Principal:</label>
+    <input type="text" id="sucursalPrincipal" name="sucursalPrincipal" required>
+    <br>
+    <button type="submit">Dar de alta Cliente</button>
+</form>
+</body>
+</html>

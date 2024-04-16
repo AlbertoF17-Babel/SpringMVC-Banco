@@ -1,5 +1,8 @@
 package es.babel.model;
 
+import java.util.List;
+import java.util.Objects;
+
 public class Cliente{
     int id;
     String dni;
@@ -8,11 +11,13 @@ public class Cliente{
     String email;
     String telefono;
     Sucursal sucursalPrincipal;
+    List<Cuenta> cuentasAsociadas;
 
     public Cliente() {
     }
 
-    public Cliente(int id, String dni, String nombre, int direccionPostal, String email, String telefono, Sucursal sucursalPrincipal) {
+    public Cliente(int id, String dni, String nombre, int direccionPostal, String email, String telefono,
+            Sucursal sucursalPrincipal, List<Cuenta> cuentasAsociadas) {
         this.id = id;
         this.dni = dni;
         this.nombre = nombre;
@@ -77,4 +82,20 @@ public class Cliente{
     public void setSucursalPrincipal(Sucursal sucursalPrincipal) {
         this.sucursalPrincipal = sucursalPrincipal;
     }
+
+    public List<Cuenta> getCuentasAsociadas() {
+        return cuentasAsociadas;
+    }
+
+    public void setCuentasAsociadas(List<Cuenta> cuentasAsociadas) {
+        this.cuentasAsociadas = cuentasAsociadas;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Cliente cliente)) return false;
+        return id == cliente.id || Objects.equals(dni, cliente.dni) || Objects.equals(email, cliente.email);
+    }
+
 }

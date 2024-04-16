@@ -8,18 +8,16 @@ public class Cuenta {
     Sucursal sucursal;
     int idUsuario;
     Double balance;
-    List<Cuenta> cuentasAsociadas;
 
     public Cuenta() {
     }
 
-    public Cuenta(int id, long numCuenta, Sucursal sucursal, int idUsuario, Double balance, List<Cuenta> cuentasAsociadas) {
+    public Cuenta(int id, long numCuenta, Sucursal sucursal, int idUsuario, Double balance) {
         this.id = id;
         this.numCuenta = numCuenta;
         this.sucursal = sucursal;
         this.idUsuario = idUsuario;
         this.balance = balance;
-        this.cuentasAsociadas = cuentasAsociadas;
     }
 
     public int getId() {
@@ -62,11 +60,4 @@ public class Cuenta {
         this.balance = balance;
     }
 
-    public List<Cuenta> getCuentasAsociadas() {
-        return cuentasAsociadas;
-    }
-
-    public void setCuentasAsociadas(List<Cuenta> cuentasAsociadas) {
-        this.cuentasAsociadas = cuentasAsociadas;
-    }
 }
