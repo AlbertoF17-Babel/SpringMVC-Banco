@@ -4,7 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9d5b4b27-5822-4d2b-a539-1d52c184682f" name="Changes" comment="Initial Commit" />
+    <list default="true" id="9d5b4b27-5822-4d2b-a539-1d52c184682f" name="Changes" comment="develop branch creada">
+      <change afterPath="$PROJECT_DIR$/src/main/java/es/babel/controller/ClienteController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/es/babel/controller/CuentaController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/es/babel/controller/SucursalController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/es/babel/repository/ClienteDB.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/es/babel/repository/CuentaDB.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/es/babel/repository/IClienteDB.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/es/babel/repository/ICuentaDB.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/es/babel/repository/ISucursalDB.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/es/babel/repository/SucursalDB.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/es/babel/service/ClienteService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/es/babel/service/CuentaService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/es/babel/service/IClienteService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/es/babel/service/ICuentaService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/es/babel/service/ISucursalService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/es/babel/service/SucursalService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,35 +32,52 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="HTML File" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/AlbertoF17-Babel/SpringMVC-Banco.git",
-    "accountId": "aa987fc8-dd08-40d2-b3d2-74231d513ebf"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;AlbertoF17-Babel&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 3
-}]]></component>
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/AlbertoF17-Babel/SpringMVC-Banco.git&quot;,
+    &quot;accountId&quot;: &quot;aa987fc8-dd08-40d2-b3d2-74231d513ebf&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="2fAvzWOPJUmKEr0XyYBrRFQ8NT9" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "kotlin-language-version-configured": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;develop&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -59,11 +95,20 @@
       <option name="project" value="LOCAL" />
       <updated>1713258006073</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="develop branch creada">
+      <option name="closed" value="true" />
+      <created>1713258125190</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1713258125190</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial Commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial Commit" />
+    <MESSAGE value="develop branch creada" />
+    <option name="LAST_COMMIT_MESSAGE" value="develop branch creada" />
   </component>
 </project>
