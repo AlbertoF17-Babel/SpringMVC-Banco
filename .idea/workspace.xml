@@ -4,24 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9d5b4b27-5822-4d2b-a539-1d52c184682f" name="Changes" comment="develop branch creada">
-      <change afterPath="$PROJECT_DIR$/src/main/java/es/babel/controller/ClienteController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/es/babel/controller/CuentaController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/es/babel/controller/SucursalController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/es/babel/repository/ClienteDB.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/es/babel/repository/CuentaDB.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/es/babel/repository/IClienteDB.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/es/babel/repository/ICuentaDB.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/es/babel/repository/ISucursalDB.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/es/babel/repository/SucursalDB.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/es/babel/service/ClienteService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/es/babel/service/CuentaService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/es/babel/service/IClienteService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/es/babel/service/ICuentaService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/es/babel/service/ISucursalService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/es/babel/service/SucursalService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="9d5b4b27-5822-4d2b-a539-1d52c184682f" name="Changes" comment="packages y clases añadidas">
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -103,12 +86,32 @@
       <option name="project" value="LOCAL" />
       <updated>1713258125190</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="packages y clases añadidas">
+      <option name="closed" value="true" />
+      <created>1713258873493</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1713258873493</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial Commit" />
     <MESSAGE value="develop branch creada" />
-    <option name="LAST_COMMIT_MESSAGE" value="develop branch creada" />
+    <MESSAGE value="packages y clases añadidas" />
+    <option name="LAST_COMMIT_MESSAGE" value="packages y clases añadidas" />
   </component>
 </project>
