@@ -5,7 +5,6 @@ import es.babel.model.Sucursal;
 import java.util.List;
 
 public interface ISucursalDB {
-    void inicializarSucursales();
 
     List<Sucursal> listarSucursales();
 

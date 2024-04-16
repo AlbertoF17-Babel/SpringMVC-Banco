@@ -4,12 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9d5b4b27-5822-4d2b-a539-1d52c184682f" name="Changes" comment="Sucursal DB y service">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/detalleSucursal.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/sucursales.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+    <list default="true" id="9d5b4b27-5822-4d2b-a539-1d52c184682f" name="Changes" comment="Controller sucursal">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/es/babel/controller/SucursalController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/babel/controller/SucursalController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/es/babel/repository/ISucursalDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/babel/repository/ISucursalDB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/es/babel/repository/SucursalDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/babel/repository/SucursalDB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/sucursales.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/sucursales.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,6 +68,7 @@
     "Spring Boot.BancoApplication.executor": "Run",
     "git-widget-placeholder": "develop",
     "kotlin-language-version-configured": "true",
+    "node.js.selected.package.tslint": "(autodetect)",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0"
@@ -142,7 +144,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713264986675</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Controller sucursal">
+      <option name="closed" value="true" />
+      <created>1713266760306</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1713266760306</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -161,6 +171,7 @@
     <MESSAGE value="develop branch creada" />
     <MESSAGE value="packages y clases añadidas" />
     <MESSAGE value="Sucursal DB y service" />
-    <option name="LAST_COMMIT_MESSAGE" value="Sucursal DB y service" />
+    <MESSAGE value="Controller sucursal" />
+    <option name="LAST_COMMIT_MESSAGE" value="Controller sucursal" />
   </component>
 </project>

@@ -26,8 +26,6 @@
     <thead>
     <tr>
         <th>Nombre</th>
-        <th>Director</th>
-        <th>Dirección</th>
         <th>Opciones</th>
     </tr>
     </thead>
@@ -51,7 +49,7 @@
 <hr>
 
 <h2>Agregar Nueva Sucursal</h2>
-<form th:action="@{/sucursal}" method="post">
+<form th:action="@{/sucursales}" method="post">
     <label for="nombre">Nombre:</label>
     <input type="text" id="nombre" name="nombre" required>
     <br>

@@ -5,14 +5,12 @@ import es.babel.service.SucursalService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.util.function.SupplierUtils;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @Controller
+@RequestMapping(value = "/sucursales")
 public class SucursalController {
 
     private final SucursalService sucursalService;
@@ -21,14 +19,14 @@ public class SucursalController {
         this.sucursalService = sucursalService;
     }
 
-    @GetMapping("/sucursales")
+    @GetMapping
     public String listarSucursales(Model model) {
         List<Sucursal> sucursales = sucursalService.listarSucursales();
         model.addAttribute("sucursales", sucursales);
         return "sucursales";
     }
 
-    @PostMapping("/sucursal")
+    @PostMapping
     public String crearSucursal(@ModelAttribute Sucursal sucursal, Model model) {
         sucursalService.agregarSucursal(sucursal);
         List<Sucursal> sucursales = sucursalService.listarSucursales();
