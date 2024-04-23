@@ -1,5 +1,6 @@
 package es.babel.service;
 
+import es.babel.model.Cliente;
 import es.babel.model.Cuenta;
 import es.babel.repository.ClienteDB;
 import es.babel.repository.CuentaDB;
@@ -31,8 +32,16 @@ public class CuentaService implements ICuentaService {
 
 
  */
+
     @Override
-    public Cuenta obtenerCuenta(int id) {
+    public Cuenta obtenerCuenta(int idCliente, int idCuenta) {
+        List<Cliente> listaClientes = clienteDB.listarClientes();
+        for (Cliente cliente : listaClientes) {
+            if (cliente.getId() == idCliente){
+                if(cliente.)
+                cliente;
+            }
+        }
         return null;
     }
 
@@ -42,18 +51,18 @@ public class CuentaService implements ICuentaService {
     }
 
     @Override
-    public void modificarCuenta() {
-        cuentaDB.modificarCuenta();
+    public void modificarCuenta(int id) {
+        cuentaDB.modificarCuenta(id);
     }
 
     @Override
     public void borrarCuenta(int id) {
-
+        cuentaDB.borrarCuenta(id);
     }
 
     @Override
     public List<Cuenta> listarCuenta() {
-        return null;
+        return cuentaDB.listarCuenta();
     }
     /*
 

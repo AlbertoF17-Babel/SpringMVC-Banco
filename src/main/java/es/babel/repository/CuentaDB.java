@@ -1,6 +1,8 @@
 package es.babel.repository;
 
+import es.babel.model.Cliente;
 import es.babel.model.Cuenta;
+import es.babel.model.Sucursal;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -12,69 +14,39 @@ public class CuentaDB implements ICuentaDB {
 
     @Override
     public Cuenta obtenerCuenta(int id) {
-        return null;
-    }
-
-    @Override
-    public Cuenta agregarCuenta(Cuenta cuenta) {
-        return null;
-    }
-
-    @Override
-    public void modificarCuenta() {
-
-    }
-
-    @Override
-    public void borrarCuenta(int id) {
-
-    }
-
-    @Override
-    public List<Cuenta> listarCuenta() {
-        return null;
-    }
-
-    /*
-    @Override
-    public Cuenta obtenerCuenta(int id) {
-        Cuenta cuenta = null;
-        for (Cuenta cuentaItem : listaCuentas) {
-            if (id == cuentaItem.getId()) {
-                cuenta= cuentaItem;
+        Cuenta cuentaObtenida = null;
+        for (Cuenta cuenta: listaCuentas) {
+            if (id == cuenta.getId()) {
+                cuentaObtenida = cuenta;
                 break;
             }
         }
-        return cuenta;
+        return cuentaObtenida;
     }
 
     @Override
-    public Cuenta agregarCuenta(Cuenta cuenta) {
+    public void agregarCuenta(Cuenta cuenta) {
         listaCuentas.add(cuenta);
-        return cuenta;
     }
 
     @Override
-    public void modificarCuenta() {
-
+    public void modificarCuenta(int id) {
+        Cuenta cuentaAModificar = obtenerCuenta(id);
     }
 
     @Override
     public void borrarCuenta(int id) {
         try{
-            Cuenta cuenta = obtenerCuenta(id);
-            listaCuentas.remove(cuenta);
+         Cuenta cuentaABorrar = obtenerCuenta(id);
+         listaCuentas.remove(cuentaABorrar);
         } catch (Exception e){
-            System.out.println("No hay cuenta para borrar");
+            System.out.println("No hay cuenta que borrar");
         }
     }
-
 
     @Override
     public List<Cuenta> listarCuenta() {
         return listaCuentas;
     }
-
-     */
 
 }

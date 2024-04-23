@@ -8,8 +8,8 @@ public interface ICuentaDB {
 
 
     Cuenta obtenerCuenta(int id);
-    Cuenta agregarCuenta(Cuenta cuenta);
-    void modificarCuenta();
+    void agregarCuenta(Cuenta cuenta);
+    void modificarCuenta(int id);
     void borrarCuenta(int id);
 
     List<Cuenta> listarCuenta();

@@ -8,7 +8,7 @@ public interface ICuentaService {
 
     Cuenta obtenerCuenta(int id);
     Cuenta agregarCuenta(Cuenta cuenta);
-    void modificarCuenta();
+    void modificarCuenta(int id);
     void borrarCuenta(int id);
 
     List<Cuenta> listarCuenta();

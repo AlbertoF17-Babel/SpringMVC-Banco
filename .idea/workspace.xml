@@ -5,13 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9d5b4b27-5822-4d2b-a539-1d52c184682f" name="Changes" comment="packages y clases añadidas">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/babel/controller/ClienteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/babel/controller/ClienteController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/babel/repository/ClienteDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/babel/repository/ClienteDB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/babel/service/ClienteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/babel/service/ClienteService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/babel/service/IClienteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/babel/service/IClienteService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/clientes.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/cliente.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/es/babel/repository/CuentaDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/babel/repository/CuentaDB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/es/babel/repository/ICuentaDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/babel/repository/ICuentaDB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/es/babel/service/CuentaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/babel/service/CuentaService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/es/babel/service/ICuentaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/babel/service/ICuentaService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
