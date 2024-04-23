@@ -1,5 +1,6 @@
 package es.babel.model;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
@@ -10,21 +11,22 @@ public class Cliente{
     int direccionPostal;
     String email;
     String telefono;
-    int sucursalPrincipalID;
+    Sucursal sucursalPrincipal;
     List<Cuenta> cuentasAsociadas;
 
     public Cliente() {
     }
 
     public Cliente(int id, String dni, String nombre, int direccionPostal, String email, String telefono,
-            int sucursalPrincipalID, List<Cuenta> cuentasAsociadas) {
+        Sucursal sucursalPrincipal) {
         this.id = id;
         this.dni = dni;
         this.nombre = nombre;
         this.direccionPostal = direccionPostal;
         this.email = email;
         this.telefono = telefono;
-        this.sucursalPrincipalID = sucursalPrincipalID;
+        this.sucursalPrincipal = sucursalPrincipal;
+        this.cuentasAsociadas = new ArrayList<Cuenta>();
     }
 
     public int getId() {
@@ -75,12 +77,12 @@ public class Cliente{
         this.telefono = telefono;
     }
 
-    public int getSucursalPrincipalID() {
-        return sucursalPrincipalID;
+    public Sucursal getSucursalPrincipal() {
+        return sucursalPrincipal;
     }
 
-    public void setSucursalPrincipal(int sucursalPrincipalID) {
-        this.sucursalPrincipalID = sucursalPrincipalID;
+    public void setSucursalPrincipal(Sucursal sucursalPrincipal) {
+        this.sucursalPrincipal = sucursalPrincipal;
     }
 
     public List<Cuenta> getCuentasAsociadas() {

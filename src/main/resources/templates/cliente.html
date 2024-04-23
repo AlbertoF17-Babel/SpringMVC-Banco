@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista de Sucursales</title>
+    <title>Lista de Clientes</title>
     <style>
         table {
           width: 100%;
@@ -32,7 +32,7 @@
         <th>Dirección Postal</th>
         <th>Email</th>
         <th>Teléfono</th>
-        <th>ID Sucursal Principal</th>
+        <th>Sucursal Principal</th>
     </tr>
     </thead>
     <tbody>
@@ -42,7 +42,7 @@
         <td th:text="${cliente.direccionPostal}"></td>
         <td th:text="${cliente.email}"></td>
         <td th:text="${cliente.telefono}"></td>
-        <td th:text="${cliente.sucursalPrincipalID}"></td>
+        <td th:text="${cliente.sucursalPrincipal.nombre}"></td>
         <td>
             <a th:href="@{/cliente/} + ${cliente.id}">
                 DETALLE
@@ -80,7 +80,7 @@
     <label for="sucursalPrincipal">Sucursal Principal:</label>
     <select name="sucursalPrincipal" id="sucursalPrincipal" required>
         <option value="">Seleccione una opción</option>
-        <option th:each="sucursal: ${sucursales}" th:value="${sucursal.id}" th:text="${sucursal.nombre}"></option>
+        <option th:each="sucursal: ${sucursales}" th:value="${sucursal}" th:text="${sucursal.nombre}"></option>
     </select>
     <br>
     <button type="submit">Dar de alta Cliente</button>
