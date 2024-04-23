@@ -7,10 +7,11 @@ import java.util.List;
 public interface ICuentaService {
 
     List<Cuenta> obtenerCuentas(int idCliente);
-    Cuenta agregarCuenta (Cuenta cuenta);
+    void agregarCuenta (Cuenta cuenta);
     void modificarCuenta(int idCuenta);
     void borrarCuenta(int idCuenta);
 
     List<Cuenta> listarCuenta();
 
+    Cuenta obtenerCuenta(int id);
 }

@@ -41,23 +41,39 @@ public class CuentaService implements ICuentaService {
     }
 
     @Override
-    public Cuenta agregarCuenta(Cuenta cuenta) {
-        cuentaDB.agregarCuenta(cuenta);
-        return cuenta;
+    public void agregarCuenta(Cuenta cuenta) {
+        cuentaDB.listarCuenta().add(cuenta);
     }
 
     @Override
     public void modificarCuenta(int idCuenta) {
-        cuentaDB.modificarCuenta(idCuenta);
+        Cuenta cuentaAModificar = obtenerCuenta(idCuenta);
     }
 
     @Override
     public void borrarCuenta(int idCuenta) {
-        cuentaDB.borrarCuenta(idCuenta);
+        try{
+            Cuenta cuentaABorrar = obtenerCuenta(idCuenta);
+            cuentaDB.listarCuenta().remove(cuentaABorrar);
+        } catch (Exception e){
+            System.out.println("No hay cuenta que borrar");
+        }
     }
 
     @Override
     public List<Cuenta> listarCuenta() {
         return cuentaDB.listarCuenta();
+    }
+
+    @Override
+    public Cuenta obtenerCuenta(int id) {
+        Cuenta cuentaObtenida = null;
+        for (Cuenta cuenta: cuentaDB.listarCuenta()) {
+            if (id == cuenta.getId()) {
+                cuentaObtenida = cuenta;
+                break;
+            }
+        }
+        return cuentaObtenida;
     }
 }
