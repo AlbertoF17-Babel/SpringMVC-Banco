@@ -39,11 +39,25 @@ public class CuentaController {
     }
 
     @PostMapping("/{id}/delete")
-    public String borrarCuenta(@ModelAttribute("cuentas") int idCuenta){
-        Cuenta cuenta = cuentaService.obtenerCuenta(idCuenta);
+    public String borrarCuenta(@ModelAttribute("cuentas") int id){
+        Cuenta cuenta = cuentaService.obtenerCuenta(id);
         cuentaService.borrarCuenta(cuenta);
         return "redirect:/cuentas";
     }
 
+    @PostMapping(value= "/{id}/update")
+    public String modificarCuenta(@ModelAttribute("cuentas") Cuenta cuenta){
+        cuentaService.modificarCuenta(cuenta);
+        return "redirect:/cuentas";
+    }
+
+    @GetMapping(value = "/{id}")
+    public String getCuentaByID(@PathVariable int id, Model model){
+        Cuenta cuenta = cuentaService.obtenerCuenta(id);
+        model.addAttribute("cuentas", cuenta);
+        List<Sucursal> sucursales = sucursalService.listarSucursales();
+        model.addAttribute("sucursales", sucursales);
+        return "detalleCliente";
+    }
 
 }

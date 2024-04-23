@@ -34,12 +34,12 @@
     </thead>
     <tbody>
     <tr th:each="cuenta : ${cuentas}">
-        <td th:text="${cuenta.nombre}"></td>
+        <td th:text="${cuenta.numCuenta}"></td>
         <td>
-            <a th:href="@{/cuenta/} + ${cuenta.id}">
+            <a th:href="@{/cuentas/} + ${cuenta.id}">
                 DETALLE
             </a>
-            <form th:action="@{/cuenta/} + ${cuenta.id} + @{/delete}" method="post">
+            <form th:action="@{/cuentas/} + ${cuenta.id} + @{/delete}" method="post">
                 <button type="submit">Eliminar</button>
             </form>
 
@@ -66,7 +66,7 @@
     <label for="idUsuario">ID Usuario (Dueño):</label>
     <input type="text" id="idUsuario" name="idUsuario" required>
     <br>
-    <button type="submit">Agregar Sucursal</button>
+    <button type="submit">Agregar Cuenta</button>
 </form>
 </body>
 </html>

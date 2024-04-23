@@ -19,7 +19,7 @@
     </style>
 </head>
 <body>
-<h1>Detalle de la Cuenta "<span th:text="${cuenta.nombre}"></span>"</h1>
+<h1>Detalle de la Cuenta "<span th:text="${cuenta.id}"></span>"</h1>
 <table>
     <thead>
     <tr>
@@ -33,7 +33,9 @@
     <tbody>
     <td th:text="${cuenta.id}"></td>
     <td th:text="${cuenta.numCuenta}"></td>
+    <!--
     <td th:text="${cuenta.sucursal.nombre}"></td>
+    -->
     <td th:text="${cuenta.idUsuario}"></td>
     <td th:text="${cuenta.balance}"></td>
 
