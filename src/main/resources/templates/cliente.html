@@ -62,14 +62,14 @@
 <!-- Formulario para agregar un nuevo producto -->
 <h2>Agregar Nuevo Cliente</h2>
 <form th:action="@{/cliente}" method="post">
-    <label for="dni">DNI:</label>
-    <input type="text" id="dni" name="dni" required>
+    <label for="newDni">DNI:</label>
+    <input type="text" id="newDni" name="dni" required>
     <br>
     <label for="nombre">Nombre:</label>
     <input type="text" id="nombre" name="nombre" required>
     <br>
-    <label for="email">Email:</label>
-    <input type="text" id="email" name="email" required>
+    <label for="newEmail">Email:</label>
+    <input type="text" id="newEmail" name="email" required>
     <br>
     <label for="direccionPostal">Dirección Postal:</label>
     <input type="text" id="direccionPostal" name="direccionPostal" required>
@@ -77,10 +77,10 @@
     <label for="telefono">Telefono:</label>
     <input type="text" id="telefono" name="telefono" required>
     <br>
-    <label for="sucursalPrincipal">Sucursal Principal:</label>
-    <select name="sucursalPrincipal" id="sucursalPrincipal" required>
+    <label for="sucursalPrincipalId">Sucursal Principal:</label>
+    <select name="sucursalPrincipalId" id="sucursalPrincipalId" required>
         <option value="">Seleccione una opción</option>
-        <option th:each="sucursal: ${sucursales}" th:value="${sucursal}" th:text="${sucursal.nombre}"></option>
+        <option th:each="sucursal: ${sucursales}" th:value="${sucursal.id}" th:text="${sucursal.nombre}"></option>
     </select>
     <br>
     <button type="submit">Dar de alta Cliente</button>

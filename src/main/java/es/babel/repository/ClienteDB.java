@@ -10,6 +10,7 @@ import java.util.List;
 public class ClienteDB implements IClienteDB {
 
     List<Cliente> listaClientes = new ArrayList<>();
+    private int lastId = 1;
 
     @Override
     public List<Cliente> listarClientes() {
@@ -53,12 +54,9 @@ public class ClienteDB implements IClienteDB {
     public Cliente agregarCliente(Cliente cliente) {
         boolean exists = listarClientes().stream().anyMatch(e -> e.getDni().equals(cliente.getDni()));
         if (!exists) {
-                int idUltimoCliente = listaClientes.get(listaClientes.size()-1).getId();
-                cliente.setId(idUltimoCliente+1);
-        } else {
-            cliente.setId(1);
+            cliente.setId(lastId++);
+            listarClientes().add(cliente);
         }
-        listarClientes().add(cliente);
         return cliente;
     }
 

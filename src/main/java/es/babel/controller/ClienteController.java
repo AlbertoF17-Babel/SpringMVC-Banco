@@ -34,27 +34,33 @@ public class ClienteController {
     public String getClienteByDNI(@PathVariable String dni, Model model){
         Cliente cliente = clienteService.buscarClienteByDni(dni);
         model.addAttribute("cliente", cliente);
-        return "redirect:/cliente";
+        List<Sucursal> sucursales = sucursalService.listarSucursales();
+        model.addAttribute("sucursales", sucursales);
+        return "detalleCliente";
     }
 
     @GetMapping(value = "/{id}")
     public String getClienteByID(@PathVariable int id, Model model){
         Cliente cliente = clienteService.buscarClienteById(id);
         model.addAttribute("cliente", cliente);
-        return "redirect:/cliente";
+        List<Sucursal> sucursales = sucursalService.listarSucursales();
+        model.addAttribute("sucursales", sucursales);
+        return "detalleCliente";
     }
 
     @GetMapping(value = "/email/{email}")
     public String getClienteByEmail(@PathVariable String email, Model model){
         Cliente cliente = clienteService.buscarClienteByEmail(email);
         model.addAttribute("cliente", cliente);
-        return "redirect:/cliente";
+        List<Sucursal> sucursales = sucursalService.listarSucursales();
+        model.addAttribute("sucursales", sucursales);
+        return "detalleCliente";
     }
 
     @PostMapping
     public String agregarCliente(@ModelAttribute("cliente") Cliente cliente) {
         clienteService.agregarCliente(cliente);
-        return "redirect:/cliente";
+        return "redirect:cliente";
     }
 
     @PostMapping(value = "/{id}/update")

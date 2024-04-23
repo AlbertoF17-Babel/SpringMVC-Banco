@@ -9,7 +9,7 @@ import java.util.List;
 @Repository
 public class SucursalDB implements ISucursalDB {
     private final List<Sucursal> sucursalRepository = new ArrayList<>();
-
+    private int lastId = 1;
 
 
     @Override
@@ -19,12 +19,7 @@ public class SucursalDB implements ISucursalDB {
 
     @Override
     public void agregarSucursal(Sucursal sucursal) {
-        if (!sucursalRepository.isEmpty()) {
-            int idUltimaSucursal = sucursalRepository.get(sucursalRepository.size()-1).getId();
-            sucursal.setId(idUltimaSucursal+1);
-        } else {
-            sucursal.setId(1);
-        }
+        sucursal.setId(lastId++);
         sucursalRepository.add(sucursal);
     }
 

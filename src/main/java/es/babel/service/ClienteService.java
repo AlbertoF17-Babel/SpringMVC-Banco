@@ -11,13 +11,21 @@ public class ClienteService implements IClienteService {
 
     private final IClienteDB clienteDB;
 
-    public ClienteService(IClienteDB clienteDB) {
+    private final ISucursalService sucursalService;
+
+    public ClienteService(IClienteDB clienteDB, ISucursalService sucursalService) {
         this.clienteDB = clienteDB;
+        this.sucursalService = sucursalService;
     }
 
     @Override
     public List<Cliente> listarClientes() {
-        return this.clienteDB.listarClientes();
+        List<Cliente> clientesList =  this.clienteDB.listarClientes();
+
+        for (Cliente cliente : clientesList) {
+            cliente.setSucursalPrincipal(sucursalService.detalleSucursal(cliente.getSucursalPrincipalId()));
+        }
+        return clientesList;
     }
 
     @Override
@@ -47,13 +55,27 @@ public class ClienteService implements IClienteService {
 
 
     @Override
-    public Cliente modificarCliente(Cliente cliente) {
+    public void modificarCliente(Cliente cliente) {
         for (Cliente clienteListado : clienteDB.listarClientes()) {
             if (clienteListado.getDni().equalsIgnoreCase(cliente.getDni()) || clienteListado.getEmail().equalsIgnoreCase(cliente.getEmail())
                     || clienteListado.getId() == cliente.getId()) {
-                return cliente;
+                if (cliente.getDireccionPostal() != 0){
+                    clienteListado.setDireccionPostal(cliente.getDireccionPostal());
+                }
+                if (!cliente.getEmail().isEmpty()){
+                    clienteListado.setEmail(cliente.getEmail());
+                }
+                if (!cliente.getTelefono().isEmpty()){
+                    clienteListado.setTelefono(cliente.getTelefono());
+                }
+                if (cliente.getSucursalPrincipalId() != 0){
+                    clienteListado.setSucursalPrincipalId(cliente.getSucursalPrincipalId());
+                    clienteListado.setSucursalPrincipal(cliente.getSucursalPrincipal());
+                }
+                if (cliente.getCuentasAsociadas() != null){
+                    clienteListado.setCuentasAsociadas(cliente.getCuentasAsociadas());
+                }
             }
         }
-        return cliente;
     }
 }

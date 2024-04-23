@@ -11,6 +11,7 @@ public class Cliente{
     int direccionPostal;
     String email;
     String telefono;
+    int sucursalPrincipalId;
     Sucursal sucursalPrincipal;
     List<Cuenta> cuentasAsociadas;
 
@@ -18,15 +19,15 @@ public class Cliente{
     }
 
     public Cliente(int id, String dni, String nombre, int direccionPostal, String email, String telefono,
-        Sucursal sucursalPrincipal) {
+        int sucursalPrincipalId, Sucursal sucursalPrincipal) {
         this.id = id;
         this.dni = dni;
         this.nombre = nombre;
         this.direccionPostal = direccionPostal;
         this.email = email;
         this.telefono = telefono;
+        this.sucursalPrincipalId = sucursalPrincipalId;
         this.sucursalPrincipal = sucursalPrincipal;
-        this.cuentasAsociadas = new ArrayList<Cuenta>();
     }
 
     public int getId() {
@@ -77,12 +78,12 @@ public class Cliente{
         this.telefono = telefono;
     }
 
-    public Sucursal getSucursalPrincipal() {
-        return sucursalPrincipal;
+    public int getSucursalPrincipalId() {
+        return sucursalPrincipalId;
     }
 
-    public void setSucursalPrincipal(Sucursal sucursalPrincipal) {
-        this.sucursalPrincipal = sucursalPrincipal;
+    public void setSucursalPrincipalId(int sucursalPrincipalId) {
+        this.sucursalPrincipalId = sucursalPrincipalId;
     }
 
     public List<Cuenta> getCuentasAsociadas() {
@@ -91,6 +92,14 @@ public class Cliente{
 
     public void setCuentasAsociadas(List<Cuenta> cuentasAsociadas) {
         this.cuentasAsociadas = cuentasAsociadas;
+    }
+
+    public Sucursal getSucursalPrincipal() {
+        return sucursalPrincipal;
+    }
+
+    public void setSucursalPrincipal(Sucursal sucursalPrincipal) {
+        this.sucursalPrincipal = sucursalPrincipal;
     }
 
     @Override

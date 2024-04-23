@@ -18,5 +18,5 @@ public interface IClienteService {
 
     void eliminarCliente(int idCliente);
 
-    Cliente modificarCliente(Cliente cliente);
+    void modificarCliente(Cliente cliente);
 }

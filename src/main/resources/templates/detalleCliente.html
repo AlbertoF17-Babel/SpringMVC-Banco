@@ -39,30 +39,32 @@
     <td th:text="${cliente.nombre}"></td>
     <td th:text="${cliente.direccionPostal}"></td>
     <td th:text="${cliente.email}"></td>
-    <td th:text="${cliente.sucursalPrincipal}"></td>
+    <td th:text="${cliente.telefono}"></td>
+    <td th:text="${cliente.sucursalPrincipal.nombre}"></td>
     <td th:text="${cliente.cuentasAsociadas}"></td>
     </tbody>
 </table>
 <h2>Editar el cliente</h2>
-<form  th:action="@{/clientes/} + ${cliente.id}" method="post">
+<form  th:action="@{/cliente/} + ${cliente.id} + @{/update}" method="post">
     <label for="direccionPostal">Direccion:</label>
-    <input type="text" id="direccionPostal" name="direccionPostal" required>
+    <input type="text" id="direccionPostal" name="direccionPostal">
     <br>
     <label for="email">Email:</label>
-    <input type="text" id="email" name="email" required>
+    <input type="text" id="email" name="email">
     <br>
     <label for="telefono">Teléfono:</label>
-    <input type="text" id="telefono" name="telefono" required>
+    <input type="text" id="telefono" name="telefono">
     <br>
-    <label for="sucursalPrincipal">Sucursal Principal:</label>
-    <select name="sucursalPrincipal" id="sucursalPrincipal" th:each ="sucursal : ${sucursales}">
-        <option value="${sucursal.nombre}">${sucursal.nombre}</option>
+    <label for="sucursalPrincipalId">Sucursal Principal:</label>
+    <select name="sucursalPrincipalId" id="sucursalPrincipalId">
+        <option value="">Seleccione una opción</option>
+        <option th:each="sucursal: ${sucursales}" th:value="${sucursal.id}" th:text="${sucursal.nombre}"></option>
     </select>
     <br>
-    <label for="cuentasAsociadas">Cuentas asociadas:</label>
-    <input type="text" id="cuentasAsociadas" name="cuentasAsociadas" required>
-    <br>
-    <input type="submit" value="Editar Sucursal">
+    <!-- <label for="cuentasAsociadas">Cuentas asociadas:</label>
+    <input type="text" id="cuentasAsociadas" name="cuentasAsociadas">
+    <br> -->
+    <input type="submit" value="Editar Cliente">
 </form>
 
 </body>
