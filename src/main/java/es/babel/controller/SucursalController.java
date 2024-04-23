@@ -27,11 +27,9 @@ public class SucursalController {
     }
 
     @PostMapping
-    public String crearSucursal(@ModelAttribute Sucursal sucursal, Model model) {
+    public String crearSucursal(@ModelAttribute Sucursal sucursal) {
         sucursalService.agregarSucursal(sucursal);
-        List<Sucursal> sucursales = sucursalService.listarSucursales();
-        model.addAttribute("sucursales", sucursales);
-        return "sucursales";
+        return "redirect:/sucursales";
     }
 
     @PostMapping("/{id}")

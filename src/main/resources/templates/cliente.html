@@ -32,18 +32,17 @@
         <th>Dirección Postal</th>
         <th>Email</th>
         <th>Teléfono</th>
-        <th>Sucursal Principal</th>
+        <th>ID Sucursal Principal</th>
     </tr>
     </thead>
     <tbody>
     <tr th:each="cliente : ${listaClientes}">
-        <!--    <td th:text="${sucursal.id}"></td>-->
         <td th:text="${cliente.dni}"></td>
         <td th:text="${cliente.nombre}"></td>
         <td th:text="${cliente.direccionPostal}"></td>
         <td th:text="${cliente.email}"></td>
         <td th:text="${cliente.telefono}"></td>
-        <td th:text="${cliente.sucursalPrincipal}"></td>
+        <td th:text="${cliente.sucursalPrincipalID}"></td>
         <td>
             <a th:href="@{/cliente/} + ${cliente.id}">
                 DETALLE
@@ -78,31 +77,32 @@
     <label for="telefono">Telefono:</label>
     <input type="text" id="telefono" name="telefono" required>
     <br>
-    <!--
     <label for="sucursalPrincipal">Sucursal Principal:</label>
-    <input type="text" id="sucursalPrincipal" name="sucursalPrincipal">
-    <br>-->
-
+    <select name="sucursalPrincipal" id="sucursalPrincipal" required>
+        <option value="">Seleccione una opción</option>
+        <option th:each="sucursal: ${sucursales}" th:value="${sucursal.id}" th:text="${sucursal.nombre}"></option>
+    </select>
+    <br>
     <button type="submit">Dar de alta Cliente</button>
 </form>
 
 
 <h2>Buscar Cliente por ID</h2>
-<form th:action="@{/cliente}" method="get">
+<form th:action="@{/detalleCliente}" method="get">
     <label for="id">ID:</label>
     <input type="text" id="id" name="id">
     <button type="submit">Buscar Cliente</button>
 </form>
 
 <h2>Buscar Cliente por DNI</h2>
-<form th:action="@{/cliente/DNI/}" method="get">
+<form th:action="@{/detalleCliente}" method="get">
     <label for="dni">DNI:</label>
     <input type="text" id="dni" name="dni">
     <button type="submit">Buscar Cliente</button>
 </form>
 
 <h2>Buscar Cliente por email</h2>
-<form th:action="@{/cliente/email/}" method="get">
+<form th:action="@{/detalleCliente}" method="get">
     <label for="email">email:</label>
     <input type="text" id="email" name="email">
     <button type="submit">Buscar Cliente</button>

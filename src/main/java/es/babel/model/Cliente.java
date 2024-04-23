@@ -10,21 +10,21 @@ public class Cliente{
     int direccionPostal;
     String email;
     String telefono;
-    Sucursal sucursalPrincipal;
+    int sucursalPrincipalID;
     List<Cuenta> cuentasAsociadas;
 
     public Cliente() {
     }
 
     public Cliente(int id, String dni, String nombre, int direccionPostal, String email, String telefono,
-            Sucursal sucursalPrincipal, List<Cuenta> cuentasAsociadas) {
+            int sucursalPrincipalID, List<Cuenta> cuentasAsociadas) {
         this.id = id;
         this.dni = dni;
         this.nombre = nombre;
         this.direccionPostal = direccionPostal;
         this.email = email;
         this.telefono = telefono;
-        this.sucursalPrincipal = sucursalPrincipal;
+        this.sucursalPrincipalID = sucursalPrincipalID;
     }
 
     public int getId() {
@@ -75,12 +75,12 @@ public class Cliente{
         this.telefono = telefono;
     }
 
-    public Sucursal getSucursalPrincipal() {
-        return sucursalPrincipal;
+    public int getSucursalPrincipalID() {
+        return sucursalPrincipalID;
     }
 
-    public void setSucursalPrincipal(Sucursal sucursalPrincipal) {
-        this.sucursalPrincipal = sucursalPrincipal;
+    public void setSucursalPrincipal(int sucursalPrincipalID) {
+        this.sucursalPrincipalID = sucursalPrincipalID;
     }
 
     public List<Cuenta> getCuentasAsociadas() {

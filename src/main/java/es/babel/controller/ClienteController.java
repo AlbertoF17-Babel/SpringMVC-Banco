@@ -1,7 +1,9 @@
 package es.babel.controller;
 
 import es.babel.model.Cliente;
+import es.babel.model.Sucursal;
 import es.babel.service.IClienteService;
+import es.babel.service.ISucursalService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -13,15 +15,19 @@ import java.util.List;
 public class ClienteController {
 
     private final IClienteService clienteService;
+    private final ISucursalService sucursalService;
 
-    public ClienteController(IClienteService clienteService) {
+    public ClienteController(IClienteService clienteService, ISucursalService sucursalService) {
         this.clienteService = clienteService;
+        this.sucursalService = sucursalService;
     }
 
     @GetMapping
     public void cliente(Model model) {
         List<Cliente> listaClientes = clienteService.listarClientes();
+        List<Sucursal> sucursales = sucursalService.listarSucursales();
         model.addAttribute("listaClientes", listaClientes);
+        model.addAttribute("sucursales", sucursales);
     }
 
     @GetMapping(value = "/DNI/{dni}")

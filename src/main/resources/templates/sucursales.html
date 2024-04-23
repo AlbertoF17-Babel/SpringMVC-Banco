@@ -31,7 +31,7 @@
     </thead>
     <tbody>
     <tr th:each="sucursal : ${sucursales}">
-        <td th:text="${sucursal.nombre} + ${sucursal.id}"></td>
+        <td th:text="${sucursal.nombre}"></td>
         <td>
             <a th:href="@{/sucursales/} + ${sucursal.id}">
                 DETALLE

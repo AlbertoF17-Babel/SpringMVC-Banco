@@ -34,7 +34,7 @@
     </thead>
     <tbody>
     <tr th:each="cuenta : ${cuentas}">
-        <td th:text="${cuenta.nombre} + ${cuenta.id}"></td>
+        <td th:text="${cuenta.nombre}"></td>
         <td>
             <a th:href="@{/cuenta/} + ${cuenta.id}">
                 DETALLE
