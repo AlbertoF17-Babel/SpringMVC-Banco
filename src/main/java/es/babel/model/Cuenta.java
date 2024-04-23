@@ -5,14 +5,14 @@ import java.util.List;
 public class Cuenta {
     int id;
     long numCuenta;
-    Sucursal sucursal;
+    int sucursal;
     int idUsuario;
     Double balance;
 
     public Cuenta() {
     }
 
-    public Cuenta(int id, long numCuenta, Sucursal sucursal, int idUsuario, Double balance) {
+    public Cuenta(int id, long numCuenta, int sucursal, int idUsuario, Double balance) {
         this.id = id;
         this.numCuenta = numCuenta;
         this.sucursal = sucursal;
@@ -36,11 +36,11 @@ public class Cuenta {
         this.numCuenta = numCuenta;
     }
 
-    public Sucursal getSucursal() {
+    public int getSucursal() {
         return sucursal;
     }
 
-    public void setSucursal(Sucursal sucursal) {
+    public void setSucursal(int sucursal) {
         this.sucursal = sucursal;
     }
 
