@@ -67,5 +67,10 @@
     <input type="submit" value="Editar Cliente">
 </form>
 
+<h2>Borrar el cliente</h2>
+<form  th:action="@{/cliente/} + ${cliente.id} + @{/delete}" method="post">
+    <input type="submit" value="Borrar Cliente">
+</form>
+
 </body>
 </html>
