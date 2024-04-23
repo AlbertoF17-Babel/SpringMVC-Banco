@@ -56,9 +56,11 @@
     <label for="numCuenta">Número de cuenta:</label>
     <input type="text" id="numCuenta" name="numCuenta" required>
     <br>
-    <label for="sucursal">Sucursal:</label>
-    <select name="sucursal" id="sucursal" th:each ="sucursal : ${sucursales}">
-        <option value="${sucursal.nombre}">${sucursal.nombre}</option>
+
+    <label for="sucursal">Sucursal Principal:</label>
+    <select name="sucursal" id="sucursal" required>
+        <option value="">Seleccione una opción</option>
+        <option th:each="sucursal: ${sucursales}" th:value="${sucursal}" th:text="${sucursal.nombre}"></option>
     </select>
     <br>
     <label for="idUsuario">ID Usuario (Dueño):</label>

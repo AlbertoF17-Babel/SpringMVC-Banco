@@ -5,6 +5,7 @@ import es.babel.model.Cuenta;
 import es.babel.model.Sucursal;
 import es.babel.service.IClienteService;
 import es.babel.service.ICuentaService;
+import es.babel.service.ISucursalService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -16,16 +17,18 @@ import java.util.List;
 public class CuentaController {
 
     private final ICuentaService cuentaService;
-    private final IClienteService clienteService;
+    private final ISucursalService sucursalService;
 
-    public CuentaController(ICuentaService cuentaService, IClienteService clienteService) {
+    public CuentaController(ICuentaService cuentaService, ISucursalService sucursalService) {
         this.cuentaService = cuentaService;
-        this.clienteService = clienteService;
+        this.sucursalService = sucursalService;
     }
 
     @GetMapping
     public void cuenta(Model model) {
         List<Cuenta> listaCuentas = cuentaService.listarCuenta();
+        List<Sucursal> listaSucursales = sucursalService.listarSucursales();
+        model.addAttribute("sucursales", listaSucursales);
         model.addAttribute("cuentas", listaCuentas);
     }
 
@@ -35,10 +38,12 @@ public class CuentaController {
         return "redirect:/cuentas";
     }
 
-    @PostMapping
+    @PostMapping("/{id}/delete")
     public String borrarCuenta(@ModelAttribute("cuentas") int idCuenta){
         Cuenta cuenta = cuentaService.obtenerCuenta(idCuenta);
         cuentaService.borrarCuenta(cuenta);
         return "redirect:/cuentas";
     }
+
+
 }
