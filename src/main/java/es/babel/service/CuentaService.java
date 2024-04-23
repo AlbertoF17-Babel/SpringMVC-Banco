@@ -20,10 +20,13 @@ public class CuentaService implements ICuentaService {
         this.clienteDB = clienteDB;
     }
 
+
+
     @Override
     public List<Cuenta> obtenerCuentas(int idCliente) {
         List<Cuenta> listaCuentasTotales = cuentaDB.listarCuenta();
         List<Cliente> listaClientes = clienteDB.listarClientes();
+
         this.listaCuentasUsuario = null;
 
 
@@ -51,10 +54,9 @@ public class CuentaService implements ICuentaService {
     }
 
     @Override
-    public void borrarCuenta(int idCuenta) {
+    public void borrarCuenta(Cuenta cuenta) {
         try{
-            Cuenta cuentaABorrar = obtenerCuenta(idCuenta);
-            cuentaDB.listarCuenta().remove(cuentaABorrar);
+            cuentaDB.listarCuenta().remove(cuenta);
         } catch (Exception e){
             System.out.println("No hay cuenta que borrar");
         }
