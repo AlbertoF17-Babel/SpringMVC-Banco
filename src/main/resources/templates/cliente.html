@@ -36,7 +36,7 @@
     </tr>
     </thead>
     <tbody>
-    <tr th:each="cliente : ${clientes}">
+    <tr th:each="cliente : ${listaClientes}">
         <!--    <td th:text="${sucursal.id}"></td>-->
         <td th:text="${cliente.dni}"></td>
         <td th:text="${cliente.nombre}"></td>
@@ -78,9 +78,11 @@
     <label for="telefono">Telefono:</label>
     <input type="text" id="telefono" name="telefono" required>
     <br>
+    <!--
     <label for="sucursalPrincipal">Sucursal Principal:</label>
-    <input type="text" id="sucursalPrincipal" name="sucursalPrincipal" required>
-    <br>
+    <input type="text" id="sucursalPrincipal" name="sucursalPrincipal">
+    <br>-->
+
     <button type="submit">Dar de alta Cliente</button>
 </form>
 </body>

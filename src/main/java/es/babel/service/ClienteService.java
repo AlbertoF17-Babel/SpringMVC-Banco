@@ -21,6 +21,39 @@ public class ClienteService implements IClienteService {
     }
 
     @Override
+    public Cliente buscarClienteByDni(String dni) {
+        List<Cliente> listaClientes = clienteDB.listarClientes();
+        for (Cliente cliente : listaClientes) {
+            if (cliente.getDni().equals(dni)){
+                return cliente;
+            }
+        }
+        return null;
+    }
+
+    @Override
+    public Cliente buscarClienteById(int id) {
+        List<Cliente> listaClientes = clienteDB.listarClientes();
+        for (Cliente cliente : listaClientes) {
+            if (cliente.getId() == id){
+                return cliente;
+            }
+        }
+        return null;
+    }
+
+    @Override
+    public Cliente buscarClienteByEmail(String email) {
+        List<Cliente> listaClientes = clienteDB.listarClientes();
+        for (Cliente cliente : listaClientes) {
+            if (cliente.getEmail().equals(email)){
+                return cliente;
+            }
+        }
+        return null;
+    }
+
+    @Override
     public Cliente agregarCliente(Cliente cliente) {
         boolean exists = clienteDB.listarClientes().stream().anyMatch(e -> e.getDni().equals(cliente.getDni()));
         if (!exists) {

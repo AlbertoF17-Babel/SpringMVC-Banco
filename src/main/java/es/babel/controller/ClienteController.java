@@ -19,42 +19,48 @@ public class ClienteController {
     }
 
     @GetMapping
-    public void listarClientes(Model model) {
+    public void cliente(Model model) {
         List<Cliente> listaClientes = clienteService.listarClientes();
-        model.addAttribute(listaClientes);
+        model.addAttribute("listaClientes", listaClientes);
     }
 
     @GetMapping(value = "/DNI/{dni}")
-    public String getClienteByDNI(@PathVariable String dni){
-        return "clientes";
+    public String getClienteByDNI(@PathVariable String dni, Model model){
+        Cliente cliente = clienteService.buscarClienteByDni(dni);
+        model.addAttribute("cliente", cliente);
+        return "redirect:/cliente";
     }
 
     @GetMapping(value = "/{id}")
-    public String getClienteByID(@PathVariable int id){
-        return "clientes";
+    public String getClienteByID(@PathVariable int id, Model model){
+        Cliente cliente = clienteService.buscarClienteById(id);
+        model.addAttribute("cliente", cliente);
+        return "redirect:/cliente";
     }
 
     @GetMapping(value = "/email/{email}")
-    public String getClienteByEmail(@PathVariable String email){
-        return "clientes";
+    public String getClienteByEmail(@PathVariable String email, Model model){
+        Cliente cliente = clienteService.buscarClienteByEmail(email);
+        model.addAttribute("cliente", cliente);
+        return "redirect:/cliente";
     }
 
     @PostMapping
-    public String agregarCliente(@RequestBody Cliente cliente) {
+    public String agregarCliente(@ModelAttribute("cliente") Cliente cliente) {
         clienteService.agregarCliente(cliente);
-        return "clientes";
+        return "redirect:/cliente";
     }
 
     @PostMapping(value = "/{id}/update")
-    public String modificarCliente(@RequestBody Cliente cliente) {
+    public String modificarCliente(@ModelAttribute("cliente") Cliente cliente) {
         clienteService.modificarCliente(cliente);
-        return "clientes";
+        return "redirect:/cliente";
     }
 
-    @PostMapping(value = "/{id}/delete")
+    @PostMapping(value = "/{idCliente}/delete")
     public String eliminarCliente(@PathVariable int idCliente) {
         clienteService.eliminarCliente(idCliente);
-        return "clientes";
+        return "redirect:/cliente";
     }
 
 }

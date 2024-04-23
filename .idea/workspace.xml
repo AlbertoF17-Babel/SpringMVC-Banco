@@ -4,13 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9d5b4b27-5822-4d2b-a539-1d52c184682f" name="Changes" comment="Controller sucursal">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="9d5b4b27-5822-4d2b-a539-1d52c184682f" name="Changes" comment="packages y clases añadidas">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/babel/controller/SucursalController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/babel/controller/SucursalController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/babel/repository/ISucursalDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/babel/repository/ISucursalDB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/babel/repository/SucursalDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/babel/repository/SucursalDB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/sucursales.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/sucursales.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/es/babel/controller/ClienteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/babel/controller/ClienteController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/es/babel/repository/ClienteDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/babel/repository/ClienteDB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/es/babel/service/ClienteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/babel/service/ClienteService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/es/babel/service/IClienteService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/babel/service/IClienteService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/clientes.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/cliente.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,46 +56,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.BancoApplication.executor": "Run",
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Spring Boot.BancoApplication.executor": "Run",
-    "git-widget-placeholder": "develop",
-    "kotlin-language-version-configured": "true",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.BancoApplication.executor&quot;: &quot;Run&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;develop&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
-}]]></component>
-  <component name="RunManager">
-    <configuration name="BancoApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
-      <module name="BancoBabel" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="es.babel.BancoApplication" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="es.babel.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Spring Boot.BancoApplication" />
-      </list>
-    </recent_temporary>
-  </component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -136,23 +110,7 @@
       <option name="project" value="LOCAL" />
       <updated>1713259119292</updated>
     </task>
-    <task id="LOCAL-00005" summary="Sucursal DB y service">
-      <option name="closed" value="true" />
-      <created>1713264986675</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1713264986675</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Controller sucursal">
-      <option name="closed" value="true" />
-      <created>1713266760306</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1713266760306</updated>
-    </task>
-    <option name="localTasksCounter" value="7" />
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -170,8 +128,6 @@
     <MESSAGE value="Initial Commit" />
     <MESSAGE value="develop branch creada" />
     <MESSAGE value="packages y clases añadidas" />
-    <MESSAGE value="Sucursal DB y service" />
-    <MESSAGE value="Controller sucursal" />
-    <option name="LAST_COMMIT_MESSAGE" value="Controller sucursal" />
+    <option name="LAST_COMMIT_MESSAGE" value="packages y clases añadidas" />
   </component>
 </project>
