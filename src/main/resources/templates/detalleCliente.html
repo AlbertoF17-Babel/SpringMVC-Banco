@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Detalle Sucursal</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+<h1>Detalle del Cliente "<span th:text="${cliente.nombre}"></span>"</h1>
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>DNI</th>
+        <th>Nombre</th>
+        <th>Dirección Postal</th>
+        <th>Email</th>
+        <th>Teléfono</th>
+        <th>Sucursal principal</th>
+        <th>Cuentas asociadas</th>
+    </tr>
+    </thead>
+    <tbody>
+    <td th:text="${cliente.id}"></td>
+    <td th:text="${cliente.dni}"></td>
+    <td th:text="${cliente.nombre}"></td>
+    <td th:text="${cliente.direccionPostal}"></td>
+    <td th:text="${cliente.email}"></td>
+    <td th:text="${cliente.sucursalPrincipal}"></td>
+    <td th:text="${cliente.cuentasAsociadas}"></td>
+    </tbody>
+</table>
+<h2>Editar el cliente</h2>
+<form  th:action="@{/clientes/} + ${cliente.id}" method="post">
+    <label for="direccionPostal">Direccion:</label>
+    <input type="text" id="direccionPostal" name="direccionPostal" required>
+    <br>
+    <label for="email">Email:</label>
+    <input type="text" id="email" name="email" required>
+    <br>
+    <label for="telefono">Teléfono:</label>
+    <input type="text" id="telefono" name="telefono" required>
+    <br>
+    <label for="sucursalPrincipal">Sucursal Principal:</label>
+    <select name="sucursalPrincipal" id="sucursalPrincipal" th:each ="sucursal : ${sucursales}">
+        <option value="${sucursal.nombre}">${sucursal.nombre}</option>
+    </select>
+    <br>
+    <label for="cuentasAsociadas">Cuentas asociadas:</label>
+    <input type="text" id="cuentasAsociadas" name="cuentasAsociadas" required>
+    <br>
+    <input type="submit" value="Editar Sucursal">
+</form>
+
+</body>
+</html>
