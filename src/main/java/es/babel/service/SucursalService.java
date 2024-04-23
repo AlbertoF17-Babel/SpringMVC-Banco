@@ -35,7 +35,6 @@ public class SucursalService implements ISucursalService {
     @Override
     public void modificarSucursal(@PathVariable int id, @ModelAttribute Sucursal sucursal) {
         Sucursal sucursalAModificar = this.iSucursalDB.buscarSucursal(id);
-
         sucursalAModificar.setNombre(sucursal.getNombre());
         sucursalAModificar.setDireccion(sucursal.getDireccion());
         sucursalAModificar.setDirector(sucursal.getDirector());

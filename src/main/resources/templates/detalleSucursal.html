@@ -1,14 +1,52 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="UTF-8">
     <title>Detalle Sucursal</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
 </head>
 <body>
-
-<td th:value="${sucursal.nombre}"></td>
-<td th:value="${sucursal.director}"></td>
-<td th:value="${sucursal.direccion}"></td>
+<h1>Detalle de la Sucursal "<span th:text="${sucursal.nombre}"></span>"</h1>
+<table>
+    <thead>
+    <tr>
+        <th>Nombre</th>
+        <th>Director</th>
+        <th>Dirección</th>
+    </tr>
+    </thead>
+    <tbody>
+        <td th:text="${sucursal.nombre}"></td>
+        <td th:text="${sucursal.director}"></td>
+        <td th:text="${sucursal.direccion}"></td>
+    </tbody>
+</table>
+<h2>Editar la Sucursal</h2>
+<form  th:action="@{/sucursales/} + ${sucursal.id}" method="post">
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre" required>
+    <br>
+    <label for="director">Director:</label>
+    <input type="text" id="director" name="director" required>
+    <br>
+    <label for="direccion">Direccion:</label>
+    <input type="text" id="direccion" name="direccion" required>
+    <br>
+    <input type="submit" value="Editar Sucursal">
+</form>
 
 </body>
 </html>

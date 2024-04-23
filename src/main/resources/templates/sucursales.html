@@ -31,12 +31,12 @@
     </thead>
     <tbody>
     <tr th:each="sucursal : ${sucursales}">
-        <td th:text="${sucursal.nombre}"></td>
+        <td th:text="${sucursal.nombre} + ${sucursal.id}"></td>
         <td>
-            <a th:href="@{/sucursal/} + ${sucursal.id}">
+            <a th:href="@{/sucursales/} + ${sucursal.id}">
                 DETALLE
             </a>
-            <form th:action="@{/sucursal/} + ${sucursal.id} + @{/delete}" method="post">
+            <form th:action="@{/sucursales/} + ${sucursal.id} + @{/delete}" method="post">
                 <button type="submit">Eliminar</button>
             </form>
 

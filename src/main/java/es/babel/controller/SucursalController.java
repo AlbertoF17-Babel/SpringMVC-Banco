@@ -34,6 +34,14 @@ public class SucursalController {
         return "sucursales";
     }
 
+    @PostMapping("/{id}")
+    public String modificarSucursal(@ModelAttribute Sucursal sucursal, Model model) {
+        sucursalService.modificarSucursal(sucursal.getId(), sucursal);
+        List<Sucursal> sucursales = sucursalService.listarSucursales();
+        model.addAttribute("sucursales", sucursales);
+        return "sucursales";
+    }
+
     @PostMapping("/{id}/delete")
     public String eliminarSucursal(@PathVariable int id, Model model) {
         sucursalService.borrarSucursal(id);
@@ -42,16 +50,11 @@ public class SucursalController {
         return "sucursales";
     }
 
-    @PostMapping("/sucursal/{id}")
+    @GetMapping("/{id}")
     public String detalleSucursal(@PathVariable int id, Model model) {
         Sucursal sucursal = sucursalService.detalleSucursal(id);
-
         model.addAttribute("sucursal", sucursal);
         return "detalleSucursal";
     }
-
-
-
-
 
 }
