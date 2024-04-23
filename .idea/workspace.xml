@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9d5b4b27-5822-4d2b-a539-1d52c184682f" name="Changes" comment="ClienteController">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/cuentas.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/detalleCliente.html" afterDir="false" />
+    <list default="true" id="9d5b4b27-5822-4d2b-a539-1d52c184682f" name="Changes" comment="-Acabar cuentas">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/es/babel/controller/CuentaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/babel/controller/CuentaController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/cliente.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/cliente.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/es/babel/service/CuentaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/babel/service/CuentaService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/es/babel/service/ICuentaService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/es/babel/service/ICuentaService.java" afterDir="false" />
     </list>
     <list id="09d5bbec-2bec-45eb-acec-d7aa78898ec0" name="Changes by mireya.medalle" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -55,19 +53,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.BancoApplication.executor": "Run",
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "develop",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "D:/IntelliJ Proyects/BancoBabel/src/main/resources/templates",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.BancoApplication.executor&quot;: &quot;Run&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;develop&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/IntelliJ Proyects/BancoBabel/src/main/resources/templates&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\IntelliJ Proyects\BancoBabel\src\main\resources\templates" />
@@ -169,6 +167,7 @@
     <MESSAGE value="develop branch creada" />
     <MESSAGE value="packages y clases añadidas" />
     <MESSAGE value="ClienteController" />
-    <option name="LAST_COMMIT_MESSAGE" value="ClienteController" />
+    <MESSAGE value="-Acabar cuentas" />
+    <option name="LAST_COMMIT_MESSAGE" value="-Acabar cuentas" />
   </component>
 </project>
