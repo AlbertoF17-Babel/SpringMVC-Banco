@@ -43,6 +43,7 @@ public class CuentaService implements ICuentaService {
     @Override
     public Cuenta agregarCuenta(Cuenta cuenta) {
         cuentaDB.agregarCuenta(cuenta);
+        return cuenta;
     }
 
     @Override
